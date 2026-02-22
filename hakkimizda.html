@@ -9,6 +9,7 @@
     <style>
         .blue-brand { color: #004aad; }
         .bg-blue-brand { background-color: #004aad; }
+        .border-blue-brand { border-color: #004aad; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -28,7 +29,7 @@
 
                 <div class="hidden md:flex space-x-6 lg:space-x-8 font-semibold">
                     <a href="index.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base">Hakkımızda</a>
+                    <a href="hakkimizda.html" class="blue-brand border-b-2 border-blue-brand px-1 transition text-sm lg:text-base">Hakkımızda</a>
                     <a href="urunler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ürünler</a>
                     <a href="projeler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Projeler</a>
                     <a href="bayilikler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Bayilikler</a>
@@ -38,36 +39,39 @@
         </div>
     </nav>
 
-    <section class="py-20 bg-white">
+    <section class="py-20">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold blue-brand mb-6 uppercase italic">Biz Kimiz?</h2>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6 italic font-medium">
-                        B-MAK Mühendislik & Mimarlık, yenilikçi yaklaşımı ve teknik uzmanlığı ile sektörde fark yaratmaktadır. 
-                        Geleceğin yapılarını, mühendislik disiplini ve estetik bakış açısıyla harmanlayarak inşa ediyoruz.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex items-start bg-blue-50 p-4 rounded-xl border-l-4 border-blue-600">
-                            <i class="fas fa-eye blue-brand mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800 uppercase text-sm">Vizyonumuz</h4>
-                                <p class="text-gray-600 text-sm">Küresel standartlarda, teknoloji odaklı ve öncü mühendislik çözümleri üretmek.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start bg-gray-50 p-4 rounded-xl border-l-4 border-gray-400">
-                            <i class="fas fa-bullseye blue-brand mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800 uppercase text-sm">Misyonumuz</h4>
-                                <p class="text-gray-600 text-sm">Müşteri odaklı, sürdürülebilir, güvenilir ve yüksek kaliteli projeler geliştirmek.</p>
-                            </div>
-                        </div>
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-4 border-blue-brand rounded-3xl -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" 
+                         alt="Mekanik Mühendislik ve Isıtma Çözümleri" 
+                         class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+                    <div class="absolute bottom-6 right-6 bg-white p-6 rounded-2xl shadow-xl border-t-4 border-blue-brand">
+                        <span class="block text-3xl font-black blue-brand">B-MAK</span>
+                        <span class="text-sm font-bold text-gray-500 uppercase tracking-widest">Profesyonel Çözüm</span>
                     </div>
                 </div>
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800" alt="Mühendislik Çalışması" class="w-full transform group-hover:scale-105 transition duration-500">
+
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-black blue-brand mb-6 italic uppercase tracking-tight">Biz Kimiz?</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                        B-MAK Mühendislik & Mimarlık, ısıtma, soğutma, yalıtım ve mekanik tesisat alanlarında Trabzon merkezli olarak profesyonel çözümler sunmaktadır. Makine mühendisliği uzmanlığımızı, modern mimari anlayışla harmanlayarak projelerinize değer katıyoruz.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-8 italic">
+                        Baymak, Austrotherm ve Marshall gibi sektör lideri markaların yetkili bayisi olarak; verimlilik, dayanıklılık ve estetiği bir arada sunan mühendislik hizmetleri sağlıyoruz.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-blue-brand pl-4">
+                            <h4 class="font-bold text-gray-900 uppercase">Vizyonumuz</h4>
+                            <p class="text-sm text-gray-600 italic">Mekanik tesisat ve enerji sistemlerinde bölgenin en güvenilir ismi olmak.</p>
+                        </div>
+                        <div class="border-l-4 border-blue-brand pl-4">
+                            <h4 class="font-bold text-gray-900 uppercase">Misyonumuz</h4>
+                            <p class="text-sm text-gray-600 italic">Doğru ürün ve kusursuz mühendislik ile sürdürülebilir konfor sağlamak.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,16 +80,15 @@
 
     <footer class="bg-gray-900 text-white pt-12 pb-8">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 border-b border-gray-800 pb-8 text-center md:text-left">
-            
             <div class="flex flex-col items-center md:items-start">
                 <h4 class="text-2xl font-black text-blue-400 tracking-tighter uppercase mb-2">B-MAK</h4>
-                <p class="text-gray-400 text-sm italic uppercase tracking-wider">Profesyonel Mühendislik Çözümleri</p>
+                <p class="text-gray-400 text-sm italic uppercase tracking-wider font-medium">Profesyonel Mühendislik Çözümleri</p>
             </div>
             
             <div>
                 <h4 class="font-bold mb-4 uppercase text-blue-400">Hızlı Linkler</h4>
                 <ul class="text-gray-400 space-y-2 text-sm font-medium">
-                    <li><a href="hakkimizda.html" class="hover:text-white transition italic">Hakkımızda</a></li>
+                    <li><a href="hakkimizda.html" class="hover:text-white transition italic border-b border-blue-400">Hakkımızda</a></li>
                     <li><a href="urunler.html" class="hover:text-white transition italic">Ürünler</a></li>
                     <li><a href="projeler.html" class="hover:text-white transition italic">Projeler</a></li>
                     <li><a href="bayilikler.html" class="hover:text-white transition italic">Bayilikler</a></li>
@@ -98,11 +101,11 @@
                     <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
                     1 nolu Erdoğdu Mah. Yavuz Selim Blv. Beyazköşk Apt. No:257B Ortahisar/Trabzon
                 </p>
-                <p class="text-gray-400 text-sm mb-2">
+                <p class="text-gray-400 text-sm mb-2 italic">
                     <i class="fas fa-phone mr-2 text-blue-400"></i>
                     0546 147 96 61
                 </p>
-                <p class="text-gray-400 text-sm">
+                <p class="text-gray-400 text-sm italic font-medium">
                     <i class="fas fa-envelope mr-2 text-blue-400"></i>
                     bmakmuhendislik@gmail.com
                 </p>
