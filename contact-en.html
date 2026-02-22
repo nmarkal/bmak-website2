@@ -14,6 +14,9 @@
         .btn-animate:active { transform: scale(0.95); }
         .info-card { transition: all 0.4s ease; }
         .info-card:hover .icon-box { transform: rotate(-10deg) scale(1.1); }
+        /* Mobil Menü Animasyonu */
+        #mobile-menu { transition: max-height 0.3s ease-out; max-height: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 600px; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -31,17 +34,32 @@
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold">
-                    <a href="index-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Home</a>
-                    <a href="about-us.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">About Us</a>
-                    <a href="products-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Products</a>
-                    <a href="projects-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Projects</a>
-                    <a href="partners-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Partners</a>
-                    <a href="contact-en.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base">Contact</a>
+                    <a href="index-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Home</a>
+                    <a href="about-us.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">About Us</a>
+                    <a href="products-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Products</a>
+                    <a href="projects-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Projects</a>
+                    <a href="partners-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Partners</a>
+                    <a href="contact-en.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base italic">Contact</a>
                     
                     <a href="iletisim.html" class="flex items-center bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-gray-500 hover:bg-blue-brand hover:text-white transition shadow-sm border border-gray-200">
                         <i class="fas fa-globe mr-1"></i> TR
                     </a>
                 </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="outline-none">
+                        <i class="fas fa-bars text-2xl text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-medium italic">
+                <a href="index-en.html" class="block py-2">Home</a>
+                <a href="about-us.html" class="block py-2">About Us</a>
+                <a href="products-en.html" class="block py-2">Products</a>
+                <a href="projects-en.html" class="block py-2">Projects</a>
+                <a href="contact-en.html" class="block py-2 text-blue-600 font-bold">Contact</a>
+                <a href="iletisim.html" class="block py-2 text-gray-500">Türkçe (TR)</a>
             </div>
         </div>
     </nav>
@@ -51,20 +69,21 @@
             <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 transform transition-all hover:shadow-2xl">
                 <h2 class="text-3xl font-bold blue-brand mb-2 uppercase italic">Send Us a Message</h2>
                 <p class="text-gray-500 mb-8 italic">Please fill out the form below to reach us.</p>
-                <form action="#" class="space-y-5">
+                
+                <form action="https://formspree.io/f/BURAYA_SANA_VERILEN_ID_GELECEK" method="POST" class="space-y-5">
                     <div>
                         <label class="block text-[11px] font-black text-gray-400 mb-2 uppercase tracking-widest">Full Name</label>
-                        <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                        <input type="text" name="name" required placeholder="Your Name" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                     </div>
                     <div>
                         <label class="block text-[11px] font-black text-gray-400 mb-2 uppercase tracking-widest">Email Address</label>
-                        <input type="email" placeholder="contact@yourcompany.com" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                        <input type="email" name="email" required placeholder="contact@yourcompany.com" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                     </div>
                     <div>
                         <label class="block text-[11px] font-black text-gray-400 mb-2 uppercase tracking-widest">Message</label>
-                        <textarea placeholder="How can we help you?" rows="5" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+                        <textarea name="message" required placeholder="How can we help you?" rows="5" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
                     </div>
-                    <button class="btn-animate bg-blue-brand text-white w-full py-5 rounded-2xl font-black text-lg shadow-lg hover:bg-blue-800 flex items-center justify-center space-x-3 group">
+                    <button type="submit" class="btn-animate bg-blue-brand text-white w-full py-5 rounded-2xl font-black text-lg shadow-lg hover:bg-blue-800 flex items-center justify-center space-x-3 group">
                         <span class="uppercase tracking-widest">Send Message</span>
                         <i class="fas fa-paper-plane transition-transform group-hover:translate-x-2 group-hover:-translate-y-1"></i>
                     </button>
@@ -141,5 +160,13 @@
             &copy; 2025 B-MAK Engineering & Architecture. All rights reserved.
         </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

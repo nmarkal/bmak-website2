@@ -10,10 +10,10 @@
         .blue-brand { color: #004aad; }
         .bg-blue-brand { background-color: #004aad; }
         .baymak-orange { color: #FF6600; }
-        .logo-box { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
-        .logo-box:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border-color: #004aad; }
-        #mobile-menu { transition: max-height 0.3s ease-out; max-height: 0; overflow: hidden; }
-        #mobile-menu.open { max-height: 700px; }
+        .aust-red { color: #e30613; }
+        .marshall-blue { color: #004aad; }
+        .logo-box { transition: all 0.3s ease; }
+        .logo-box:hover { transform: translateY(-5px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -32,138 +32,124 @@
                 </div>
 
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold">
-                    <a href="index-en.html" class="text-gray-600 hover:text-blue-600">Home</a>
-                    <a href="about-us.html" class="text-gray-600 hover:text-blue-600">About Us</a>
-                    <a href="products-en.html" class="text-gray-600 hover:text-blue-600">Products</a>
-                    <a href="projects-en.html" class="text-gray-600 hover:text-blue-600">Projects</a>
-                    <a href="partners-en.html" class="blue-brand border-b-2 border-blue-brand px-1">Partners</a>
-                    <a href="contact-en.html" class="text-gray-600 hover:text-blue-600">Contact</a>
-                    <a href="bayilikler.html" class="flex items-center bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-gray-500 hover:bg-blue-brand hover:text-white transition shadow-sm">
+                    <a href="index-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Home</a>
+                    <a href="about-us.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">About Us</a>
+                    <a href="products-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Products</a>
+                    <a href="projects-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Projects</a>
+                    <a href="partners-en.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base">Partnerships</a>
+                    <a href="contact-en.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Contact</a>
+                    
+                    <a href="bayilikler.html" class="flex items-center bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-gray-500 hover:bg-blue-brand hover:text-white transition shadow-sm border border-gray-200">
                         <i class="fas fa-globe mr-1"></i> TR
                     </a>
                 </div>
-
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="outline-none"><i class="fas fa-bars text-2xl text-gray-600"></i></button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden bg-white border-t">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="index-en.html" class="block py-2">Home</a>
-                <a href="about-us.html" class="block py-2">About Us</a>
-                <a href="products-en.html" class="block py-2">Products</a>
-                <a href="projects-en.html" class="block py-2">Projects</a>
-                <a href="partners-en.html" class="block py-2 text-blue-600 font-bold">Partners</a>
-                <a href="contact-en.html" class="block py-2">Contact</a>
             </div>
         </div>
     </nav>
 
     <header class="bg-white border-b py-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-4xl font-black blue-brand mb-4 italic uppercase">AUTHORIZED SOLUTION PARTNERSHIPS</h1>
+            <h1 class="text-4xl font-black blue-brand mb-4 italic uppercase">OUR AUTHORIZED PARTNERSHIPS</h1>
             <div class="w-24 h-1 bg-blue-brand mx-auto mb-6"></div>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto font-medium italic">Strong brands, professional engineering solutions.</p>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto font-medium italic">Professional engineering and architectural solutions with the industry's leading brands.</p>
         </div>
     </header>
 
     <section class="py-16">
-        <div class="max-w-6xl mx-auto px-4 space-y-12">
-            
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
-                <div class="p-8 md:p-12">
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-                        <div class="w-48 flex-shrink-0 text-center">
-                            <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 shadow-inner">
-                                <img src="baymak-og-share.png" alt="Baymak Logo" class="max-h-full max-w-full object-contain">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid gap-12">
+                
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+                            <div class="w-48 flex-shrink-0">
+                                <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 border border-gray-100 shadow-inner">
+                                    <img src="baymak-og-share.png" alt="Baymak Logo" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <p class="text-center text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Authorized Dealer</p>
                             </div>
-                            <p class="text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Authorized Dealer</p>
-                        </div>
-                        <div class="flex-grow">
-                            <h2 class="text-3xl font-bold blue-brand mb-6 text-center md:text-left">Heating, Cooling & Water Systems</h2>
-                            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                                <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl border border-orange-100">
-                                    <i class="fas fa-fire-alt text-xl baymak-orange"></i>
-                                    <span class="font-bold text-gray-700 text-xs md:text-sm uppercase">Boilers</span>
-                                </div>
-                                <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl border border-orange-100">
-                                    <i class="fas fa-snowflake text-xl baymak-orange"></i>
-                                    <span class="font-bold text-gray-700 text-xs md:text-sm uppercase">Air Conditioning</span>
-                                </div>
-                                <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl border border-orange-100">
-                                    <i class="fas fa-leaf text-xl baymak-orange"></i>
-                                    <span class="font-bold text-gray-700 text-xs md:text-sm uppercase">Heat Pumps</span>
-                                </div>
-                                <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl border border-orange-100">
-                                    <i class="fas fa-faucet text-xl baymak-orange"></i>
-                                    <span class="font-bold text-gray-700 text-xs md:text-sm uppercase">Booster Sets</span>
-                                </div>
-                                <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl border border-orange-100">
-                                    <i class="fas fa-tint text-xl baymak-orange"></i>
-                                    <span class="font-bold text-gray-700 text-xs md:text-sm uppercase">Water Heaters</span>
-                                </div>
-                                <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl border border-orange-100">
-                                    <i class="fas fa-hot-tub text-xl baymak-orange"></i>
-                                    <span class="font-bold text-gray-700 text-xs md:text-sm uppercase">Cylinders</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
-                <div class="p-8 md:p-12">
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-                        <div class="w-48 flex-shrink-0 text-center">
-                            <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 shadow-inner">
-                                <img src="marshall.jpg" alt="Marshall Logo" class="max-h-full max-w-full object-contain">
-                            </div>
-                            <p class="text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Authorized Dealer</p>
-                        </div>
-                        <div class="flex-grow">
-                            <h2 class="text-3xl font-bold blue-brand mb-6 text-center md:text-left">Professional Paint Systems</h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="flex items-center space-x-4 p-4 bg-blue-50 rounded-2xl border border-blue-100">
-                                    <i class="fas fa-paint-roller text-2xl text-blue-600"></i>
-                                    <span class="font-bold text-gray-700 uppercase text-sm">Interior Paints & Solutions</span>
-                                </div>
-                                <div class="flex items-center space-x-4 p-4 bg-blue-50 rounded-2xl border border-blue-100">
-                                    <i class="fas fa-brush text-2xl text-blue-600"></i>
-                                    <span class="font-bold text-gray-700 uppercase text-sm">Exterior Paints & Coatings</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
-                <div class="p-8 md:p-12">
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-                        <div class="w-48 flex-shrink-0 text-center">
-                            <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 shadow-inner">
-                                <img src="austrotherm-logoo.png" alt="Austrotherm Logo" class="max-h-full max-w-full object-contain">
-                            </div>
-                            <p class="text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Authorized Dealer</p>
-                        </div>
-                        <div class="flex-grow">
-                            <h2 class="text-3xl font-bold blue-brand mb-6 text-center md:text-left">Thermal Insulation Systems</h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="flex items-center space-x-4 p-5 bg-red-50 rounded-2xl border border-red-100">
-                                    <div class="bg-white p-3 rounded-full shadow-sm"><i class="fas fa-shield-alt text-2xl text-red-600"></i></div>
-                                    <div>
-                                        <h4 class="font-black text-red-900 uppercase text-sm">EPS Insulation Boards</h4>
-                                        <p class="text-xs text-red-700 mt-1">High-performance expanded polystyrene solutions.</p>
+                            <div class="flex-grow">
+                                <h2 class="text-3xl font-bold blue-brand mb-6 text-center md:text-left">Heating and Cooling Solutions</h2>
+                                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-fire-alt text-xl baymak-orange w-6 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Combi Boiler</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-snowflake text-xl baymak-orange w-6 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Air Conditioning</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-leaf text-xl baymak-orange w-6 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Heat Pump</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-tint text-xl baymak-orange w-6 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Booster Set</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-hot-tub text-xl baymak-orange w-6 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Water Heater</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-database text-xl baymak-orange w-6 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Storage Tank</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+                            <div class="w-48 flex-shrink-0">
+                                <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 border border-gray-100 shadow-inner">
+                                    <img src="marshall.jpg" alt="Marshall Logo" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <p class="text-center text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Authorized Dealer</p>
+                            </div>
+                            <div class="flex-grow">
+                                <h2 class="text-3xl font-bold blue-brand mb-6 text-center md:text-left">Paint and Aesthetic Solutions</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="flex items-center space-x-4 p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                                        <div class="bg-white p-3 rounded-full shadow-sm"><i class="fas fa-home text-2xl marshall-blue"></i></div>
+                                        <div><h4 class="font-black text-gray-800 uppercase text-sm">Interior Paints</h4></div>
+                                    </div>
+                                    <div class="flex items-center space-x-4 p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                                        <div class="bg-white p-3 rounded-full shadow-sm"><i class="fas fa-paint-roller text-2xl marshall-blue"></i></div>
+                                        <div><h4 class="font-black text-gray-800 uppercase text-sm">Exterior Paints</h4></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+                            <div class="w-48 flex-shrink-0">
+                                <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 border border-gray-100 shadow-inner">
+                                    <img src="austrotherm-logoo.png" alt="Austrotherm Logo" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <p class="text-center text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Authorized Dealer</p>
+                            </div>
+                            <div class="flex-grow">
+                                <h2 class="text-3xl font-bold blue-brand mb-6 text-center md:text-left">Thermal Insulation Systems (EPS)</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="flex items-center space-x-4 p-5 bg-red-50 rounded-2xl border border-red-100">
+                                        <div class="bg-white p-3 rounded-full shadow-sm"><i class="fas fa-shield-alt text-2xl aust-red"></i></div>
+                                        <div><h4 class="font-black text-red-900 uppercase text-sm">EPS Thermal Insulation</h4></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -176,26 +162,28 @@
             <div>
                 <h4 class="font-bold mb-4 uppercase text-blue-400">Quick Links</h4>
                 <ul class="text-gray-400 space-y-2 text-sm font-medium">
-                    <li><a href="about-us.html" class="hover:text-white transition">About Us</a></li>
-                    <li><a href="products-en.html" class="hover:text-white transition">Products</a></li>
-                    <li><a href="projects-en.html" class="hover:text-white transition">Projects</a></li>
-                    <li><a href="contact-en.html" class="hover:text-white transition">Contact</a></li>
+                    <li><a href="about-us.html" class="hover:text-white transition italic">About Us</a></li>
+                    <li><a href="products-en.html" class="hover:text-white transition italic">Products</a></li>
+                    <li><a href="projects-en.html" class="hover:text-white transition italic">Projects</a></li>
+                    <li><a href="partners-en.html" class="hover:text-white transition italic border-b border-blue-400">Partnerships</a></li>
+                    <li><a href="contact-en.html" class="hover:text-white transition italic">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">Contact</h4>
+                <h4 class="font-bold mb-4 uppercase text-blue-400">Contact Information</h4>
                 <p class="text-gray-400 text-[11px] leading-relaxed mb-3">
                     <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
-                    1 nolu Erdoğdu Mah. Yavuz Selim Blv. No:257B Ortahisar/Trabzon
+                    1 nolu Erdoğdu Mah. Yavuz Selim Blv. Beyazköşk Apt. No:257B Ortahisar/Trabzon
                 </p>
-                <p class="text-gray-400 text-sm mb-2"><i class="fas fa-phone mr-2 text-blue-400"></i>0546 147 96 61</p>
-                <p class="text-gray-400 text-sm"><i class="fas fa-envelope mr-2 text-blue-400"></i>bmakmuhendislik@gmail.com</p>
+                <p class="text-gray-400 text-sm mb-2 italic"><i class="fas fa-phone mr-2 text-blue-400"></i>0546 147 96 61</p>
+                <p class="text-gray-400 text-sm italic font-medium"><i class="fas fa-envelope mr-2 text-blue-400"></i>bmakmuhendislik@gmail.com</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">Follow Us</h4>
+                <h4 class="font-bold mb-4 uppercase text-blue-400">Get in Touch</h4>
                 <div class="flex justify-center md:justify-start space-x-3">
-                    <a href="https://www.instagram.com/bmakmuhendislik/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center rounded-full"><i class="fab fa-instagram text-white"></i></a>
-                    <a href="https://wa.me/905461479661" target="_blank" class="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full"><i class="fab fa-whatsapp text-white text-lg"></i></a>
+                    <a href="https://www.instagram.com/bmakmuhendislik/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="https://wa.me/905461479661" target="_blank" class="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fab fa-whatsapp text-white text-lg"></i></a>
+                    <a href="mailto:bmakmuhendislik@gmail.com" class="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fas fa-envelope text-white"></i></a>
                 </div>
             </div>
         </div>
@@ -203,11 +191,5 @@
             &copy; 2025 B-MAK Engineering & Architecture. All rights reserved.
         </div>
     </footer>
-
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('open'); });
-    </script>
 </body>
 </html>

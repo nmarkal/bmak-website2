@@ -14,6 +14,9 @@
         .btn-animate:active { transform: scale(0.95); }
         .info-card { transition: all 0.4s ease; }
         .info-card:hover .icon-box { transform: rotate(-10deg) scale(1.1); }
+        /* Mobil Menü Animasyonu */
+        #mobile-menu { transition: max-height 0.3s ease-out; max-height: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 600px; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -31,17 +34,33 @@
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Hakkımızda</a>
-                    <a href="urunler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ürünler</a>
-                    <a href="projeler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Projeler</a>
-                    <a href="bayilikler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Bayilikler</a>
-                    <a href="iletisim.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base">İletişim</a>
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Ana Sayfa</a>
+                    <a href="hakkimizda.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Hakkımızda</a>
+                    <a href="urunler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Ürünler</a>
+                    <a href="projeler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Projeler</a>
+                    <a href="bayilikler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base italic">Bayilikler</a>
+                    <a href="iletisim.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base italic">İletişim</a>
                     
                     <a href="contact-en.html" class="flex items-center bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-gray-500 hover:bg-blue-brand hover:text-white transition shadow-sm border border-gray-200">
                         <i class="fas fa-globe mr-1"></i> EN
                     </a>
                 </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="outline-none">
+                        <i class="fas fa-bars text-2xl text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-medium italic text-gray-600">
+                <a href="index.html" class="block py-2">Ana Sayfa</a>
+                <a href="hakkimizda.html" class="block py-2">Hakkımızda</a>
+                <a href="urunler.html" class="block py-2">Ürünler</a>
+                <a href="projeler.html" class="block py-2">Projeler</a>
+                <a href="bayilikler.html" class="block py-2">Bayilikler</a>
+                <a href="iletisim.html" class="block py-2 text-blue-600 font-bold">İletişim</a>
+                <a href="contact-en.html" class="block py-2 text-gray-500">English (EN)</a>
             </div>
         </div>
     </nav>
@@ -50,21 +69,22 @@
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
             <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 transform transition-all hover:shadow-2xl">
                 <h2 class="text-3xl font-bold blue-brand mb-2 uppercase italic">Bize Mesaj Gönderin</h2>
-                <p class="text-gray-500 mb-8 italic">Sorularınız için formu doldurarak bize ulaşabilirsiniz.</p>
-                <form action="#" class="space-y-5">
+                <p class="text-gray-500 mb-8 italic">Size ulaşabilmemiz için lütfen aşağıdaki formu doldurun.</p>
+                
+                <form action="https://formspree.io/f/BURAYA_SANA_VERILEN_ID_GELECEK" method="POST" class="space-y-5">
                     <div>
                         <label class="block text-[11px] font-black text-gray-400 mb-2 uppercase tracking-widest">Adınız Soyadınız</label>
-                        <input type="text" placeholder="Ad Soyad" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                        <input type="text" name="name" required placeholder="Adınız" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                     </div>
                     <div>
-                        <label class="block text-[11px] font-black text-gray-400 mb-2 uppercase tracking-widest">E-posta Adresiniz</label>
-                        <input type="email" placeholder="iletisim@sirketiniz.com" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                        <label class="block text-[11px] font-black text-gray-400 mb-2 uppercase tracking-widest">E-Posta Adresiniz</label>
+                        <input type="email" name="email" required placeholder="iletisim@sirketiniz.com" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                     </div>
                     <div>
                         <label class="block text-[11px] font-black text-gray-400 mb-2 uppercase tracking-widest">Mesajınız</label>
-                        <textarea placeholder="Size nasıl yardımcı olabiliriz?" rows="5" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+                        <textarea name="message" required placeholder="Size nasıl yardımcı olabiliriz?" rows="5" class="w-full p-4 border border-gray-100 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
                     </div>
-                    <button class="btn-animate bg-blue-brand text-white w-full py-5 rounded-2xl font-black text-lg shadow-lg hover:bg-blue-800 flex items-center justify-center space-x-3 group">
+                    <button type="submit" class="btn-animate bg-blue-brand text-white w-full py-5 rounded-2xl font-black text-lg shadow-lg hover:bg-blue-800 flex items-center justify-center space-x-3 group">
                         <span class="uppercase tracking-widest">Mesajı Gönder</span>
                         <i class="fas fa-paper-plane transition-transform group-hover:translate-x-2 group-hover:-translate-y-1"></i>
                     </button>
@@ -74,7 +94,7 @@
             <div class="flex flex-col justify-center lg:pl-12">
                 <div class="mb-10 text-center md:text-left">
                     <h2 class="text-3xl font-bold blue-brand mb-4 uppercase tracking-tight italic">İletişim Bilgileri</h2>
-                    <p class="text-gray-600 leading-relaxed text-lg italic font-medium">Profesyonel mühendislik ve mimari çözümler için bizimle iletişime geçin.</p>
+                    <p class="text-gray-600 leading-relaxed text-lg italic font-medium">Profesyonel mühendislik ve mimarlık çözümleri için bizimle iletişime geçin.</p>
                 </div>
                 <div class="space-y-6">
                     <div class="info-card flex items-center p-6 bg-white rounded-2xl border border-gray-50 hover:border-blue-100 hover:shadow-md group">
@@ -95,7 +115,7 @@
                         <div class="icon-box bg-green-500 p-4 rounded-xl text-white shadow-lg mr-5"><i class="fab fa-whatsapp text-xl"></i></div>
                         <div>
                             <h4 class="font-bold text-gray-800 uppercase text-xs tracking-widest text-green-600">WhatsApp</h4>
-                            <p class="text-gray-600 font-medium italic">Doğrudan mesaj gönderin</p>
+                            <p class="text-gray-600 font-medium italic">Bize doğrudan mesaj gönderin</p>
                         </div>
                     </a>
                 </div>
@@ -120,16 +140,16 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">İletişim Bilgileri</h4>
-                <p class="text-gray-400 text-[11px] leading-relaxed mb-3">
+                <h4 class="font-bold mb-4 uppercase text-blue-400">İletişim Detayları</h4>
+                <p class="text-gray-400 text-[11px] leading-relaxed mb-3 italic">
                     <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
-                    1 nolu Erdoğdu Mah. Yavuz Selim Blv. Beyazköşk Apt. No:257B Ortahisar/Trabzon
+                    1 nolu Erdoğdu Mah. Yavuz Selim Blv. No:257B Ortahisar/Trabzon
                 </p>
                 <p class="text-gray-400 text-sm mb-2 italic"><i class="fas fa-phone mr-2 text-blue-400"></i>0546 147 96 61</p>
                 <p class="text-gray-400 text-sm italic font-medium"><i class="fas fa-envelope mr-2 text-blue-400"></i>bmakmuhendislik@gmail.com</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">Bize Ulaşın</h4>
+                <h4 class="font-bold mb-4 uppercase text-blue-400">Bizi Takip Edin</h4>
                 <div class="flex justify-center md:justify-start space-x-3">
                     <a href="https://www.instagram.com/bmakmuhendislik/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fab fa-instagram text-white"></i></a>
                     <a href="https://wa.me/905461479661" target="_blank" class="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fab fa-whatsapp text-white text-lg"></i></a>
@@ -138,8 +158,16 @@
             </div>
         </div>
         <div class="text-center mt-8 text-gray-500 text-[10px] md:text-xs uppercase tracking-widest font-bold">
-            &copy; 2025 B-MAK Mühendislik & Mimarlık. Tüm hakları saklıdır.
+            &copy; 2025 B-MAK Mühendislik & Mimarlık. Tüm Hakları Saklıdır.
         </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
