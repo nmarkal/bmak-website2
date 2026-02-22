@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayiliklerimiz | B-MAK Mühendislik & Mimarlık</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blue-brand { color: #0056b3; }
+        .bg-blue-brand { background-color: #0056b3; }
+        .baymak-orange { color: #FF6600; }
+        .marshall-blue { color: #005596; }
+        .austro-red { color: #e30613; }
+        
+        /* Logo Hover Efekti */
+        .logo-box {
+            transition: all 0.3s ease;
+        }
+        .logo-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <img src="bmak-logo.jfif" alt="B-MAK Logo" class="h-12 md:h-14 w-auto object-contain mr-3 transition-transform group-hover:scale-105">
+                        <div class="flex flex-col">
+                            <span class="text-xl md:text-2xl font-black blue-brand tracking-tighter leading-none uppercase">B-MAK</span>
+                            <span class="text-[10px] md:text-xs font-bold text-gray-500 tracking-[0.2em] uppercase leading-tight">Mühendislik & Mimarlık</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-6 lg:space-x-8 font-semibold">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ana Sayfa</a>
+                    <a href="hakkimizda.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Hakkımızda</a>
+                    <a href="urunler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ürünler</a>
+                    <a href="projeler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Projeler</a>
+                    <a href="bayilikler.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base">Bayilikler</a>
+                    <a href="iletisim.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white border-b py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-black text-gray-900 mb-4 italic uppercase">YETKİLİ ÇÖZÜM ORTAKLIKLARIMIZ</h1>
+            <div class="w-24 h-1 bg-blue-brand mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto font-medium italic">Güçlü markalar, profesyonel mühendislik çözümleri.</p>
+        </div>
+    </header>
+
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid gap-12">
+                
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+                            <div class="w-48 flex-shrink-0">
+                                <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 border border-gray-100 shadow-inner">
+                                    <img src="baymak-og-share.png" alt="Baymak Logo" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <p class="text-center text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Yetkili Bayi</p>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">Isıtma ve Soğutma Çözümleri</h2>
+                                <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-fire-alt text-2xl baymak-orange w-8 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Kombi</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-snowflake text-2xl baymak-orange w-8 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Klima</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-leaf text-2xl baymak-orange w-8 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Isı Pompası</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-faucet text-2xl baymak-orange w-8 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Hidrofor</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-hot-tub text-2xl baymak-orange w-8 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Termosifon</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-orange-50 rounded-xl">
+                                        <i class="fas fa-gears text-2xl baymak-orange w-8 text-center"></i>
+                                        <span class="font-bold text-gray-700 text-sm">Boyler</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+                            <div class="w-48 flex-shrink-0">
+                                <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 border border-gray-100 shadow-inner">
+                                    <img src="austrotherm-logoo.png" alt="Austrotherm Logo" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <p class="text-center text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Yetkili Bayi</p>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">Isı Yalıtım Sistemleri (EPS)</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="flex items-center space-x-4 p-5 bg-red-50 rounded-2xl border border-red-100">
+                                        <div class="bg-white p-3 rounded-full shadow-sm">
+                                            <i class="fas fa-shield-alt text-2xl austro-red"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-black text-red-900 uppercase text-sm">EPS Isı Yalıtım</h4>
+                                            <p class="text-xs text-gray-500 font-semibold italic">Yüksek Enerji Tasarrufu</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4 p-5 bg-red-50 rounded-2xl border border-red-100">
+                                        <div class="bg-white p-3 rounded-full shadow-sm">
+                                            <i class="fas fa-layer-group text-2xl austro-red"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-black text-red-900 uppercase text-sm">Cephe Kaplama</h4>
+                                            <p class="text-xs text-gray-500 font-semibold italic">Dayanıklı ve Estetik Çözümler</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 transition hover:shadow-2xl">
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+                            <div class="w-48 flex-shrink-0">
+                                <div class="logo-box h-32 bg-white rounded-2xl flex items-center justify-center p-4 border border-gray-100 shadow-inner">
+                                    <img src="marshall.jpg" alt="Marshall Logo" class="max-h-full max-w-full object-contain">
+                                </div>
+                                <p class="text-center text-[10px] text-gray-400 mt-4 font-black uppercase tracking-[0.2em]">Yetkili Bayi</p>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">Boya ve Yüzey Teknolojileri</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="flex items-center space-x-4 p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                                        <div class="bg-white p-3 rounded-full shadow-sm">
+                                            <i class="fas fa-home text-2xl marshall-blue"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-black text-blue-900 uppercase text-sm">İç Cephe</h4>
+                                            <p class="text-xs text-gray-500 font-semibold italic">Silinebilir, Hijyenik Boyalar</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4 p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                                        <div class="bg-white p-3 rounded-full shadow-sm">
+                                            <i class="fas fa-building text-2xl marshall-blue"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-black text-blue-900 uppercase text-sm">Dış Cephe</h4>
+                                            <p class="text-xs text-gray-500 font-semibold italic">Yüksek Korumalı Kaplamalar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 border-b border-gray-800 pb-8 text-center md:text-left">
+            
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-2xl font-black text-blue-400 tracking-tighter uppercase mb-2">B-MAK</h4>
+                <p class="text-gray-400 text-sm italic uppercase tracking-wider font-medium">Profesyonel Mühendislik Çözümleri</p>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-blue-400">Hızlı Linkler</h4>
+                <ul class="text-gray-400 space-y-2 text-sm font-medium">
+                    <li><a href="hakkimizda.html" class="hover:text-white transition italic">Hakkımızda</a></li>
+                    <li><a href="urunler.html" class="hover:text-white transition italic">Ürünler</a></li>
+                    <li><a href="projeler.html" class="hover:text-white transition italic">Projeler</a></li>
+                    <li><a href="bayilikler.html" class="hover:text-white transition italic border-b border-blue-400">Bayilikler</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-blue-400">İletişim</h4>
+                <p class="text-gray-400 text-[11px] leading-relaxed mb-3">
+                    <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
+                    1 nolu Erdoğdu Mah. Yavuz Selim Blv. Beyazköşk Apt. No:257B Ortahisar/Trabzon
+                </p>
+                <p class="text-gray-400 text-sm mb-2 italic">
+                    <i class="fas fa-phone mr-2 text-blue-400"></i>
+                    0546 147 96 61
+                </p>
+                <p class="text-gray-400 text-sm italic font-medium">
+                    <i class="fas fa-envelope mr-2 text-blue-400"></i>
+                    bmakmuhendislik@gmail.com
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-blue-400">Bize Ulaşın</h4>
+                <div class="flex justify-center md:justify-start space-x-3">
+                    <a href="https://www.instagram.com/bmakmuhendislik/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
+                        <i class="fab fa-instagram text-white"></i>
+                    </a>
+                    <a href="https://wa.me/905461479661" target="_blank" class="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
+                        <i class="fab fa-whatsapp text-white text-lg"></i>
+                    </a>
+                    <a href="mailto:bmakmuhendislik@gmail.com" class="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
+                        <i class="fas fa-envelope text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8 text-gray-500 text-[10px] md:text-xs uppercase tracking-widest font-bold">
+            &copy; 2025 B-MAK Mühendislik & Mimarlık. Tüm hakları saklıdır.
+        </div>
+    </footer>
+
+</body>
+</html>
