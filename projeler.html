@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projelerimiz | B-MAK Mühendislik & Mimarlık</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .blue-brand { color: #004aad; } 
         .bg-blue-brand { background-color: #004aad; }
@@ -14,7 +14,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
+        #mobile-menu { transition: max-height 0.3s ease-out; max-height: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 600px; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -32,60 +35,85 @@
                     </a>
                 </div>
 
-                <div class="hidden md:flex space-x-6 lg:space-x-8 font-semibold">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Hakkımızda</a>
-                    <a href="urunler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ürünler</a>
-                    <a href="projeler.html" class="blue-brand border-b-2 border-blue-brand px-1 text-sm lg:text-base">Projeler</a>
-                    <a href="bayilikler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Bayilikler</a>
-                    <a href="iletisim.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">İletişim</a>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition italic">Ana Sayfa</a>
+                    <a href="hakkimizda.html" class="text-gray-600 hover:text-blue-600 transition italic">Hakkımızda</a>
+                    <a href="urunler.html" class="text-gray-600 hover:text-blue-600 transition italic">Ürünler</a>
+                    <a href="projeler.html" class="blue-brand border-b-2 border-blue-brand px-1 italic">Projeler</a>
+                    <a href="bayilikler.html" class="text-gray-600 hover:text-blue-600 transition italic">Bayilikler</a>
+                    <a href="iletisim.html" class="text-gray-600 hover:text-blue-600 transition italic">İletişim</a>
+                    
+                    <a href="projects-en.html" class="flex items-center bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-gray-500 hover:bg-blue-brand hover:text-white transition shadow-sm border border-gray-200">
+                        <i class="fas fa-globe mr-1"></i> EN
+                    </a>
                 </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="outline-none">
+                        <i class="fas fa-bars text-2xl text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-medium italic">
+                <a href="index.html" class="block py-2">Ana Sayfa</a>
+                <a href="hakkimizda.html" class="block py-2">Hakkımızda</a>
+                <a href="urunler.html" class="block py-2">Ürünler</a>
+                <a href="projeler.html" class="block py-2 text-blue-600 font-bold">Projeler</a>
+                <a href="bayilikler.html" class="block py-2">Bayilikler</a>
+                <a href="iletisim.html" class="block py-2">İletişim</a>
             </div>
         </div>
     </nav>
 
-    <section class="py-16">
+    <header class="py-16 bg-white border-b">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 blue-brand uppercase italic">Referans Projelerimiz</h1>
+                <h1 class="text-4xl md:text-5xl font-black mb-4 blue-brand uppercase italic">Referans Projelerimiz</h1>
                 <div class="w-24 h-1 bg-blue-brand mx-auto mb-6"></div>
                 <p class="text-lg text-gray-500 max-w-2xl mx-auto font-medium italic">Mühendislik disiplini ve mimari estetikle hayata geçirdiğimiz çalışmalarımız.</p>
             </div>
+        </div>
+    </header>
             
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group relative overflow-hidden rounded-3xl shadow-xl bg-white">
+                <div class="group relative overflow-hidden rounded-3xl shadow-xl bg-white border border-gray-100">
                     <div class="w-full h-80 project-placeholder">
-                        <img src="" alt="Proje Görseli Gelecek" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <img src="project1.jpg" alt="Mekanik Tesisat" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                         <i class="fas fa-image text-4xl text-gray-300 absolute"></i>
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-95 transition-all duration-500 flex flex-col justify-end p-8 text-white">
                         <span class="text-xs uppercase tracking-widest mb-2 text-blue-300 font-bold">Endüstriyel</span>
-                        <h3 class="font-bold text-2xl mb-1 uppercase">Proje Başlığı 1</h3>
-                        <p class="text-sm opacity-90 flex items-center italic"><i class="fas fa-map-marker-alt mr-2 text-xs"></i>Konum / Yıl</p>
+                        <h3 class="font-bold text-2xl mb-1 uppercase tracking-tight">Mekanik Tesisat</h3>
+                        <p class="text-sm opacity-90 flex items-center italic"><i class="fas fa-map-marker-alt mr-2 text-xs text-blue-300"></i>Trabzon / 2024</p>
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-3xl shadow-xl bg-white">
+                <div class="group relative overflow-hidden rounded-3xl shadow-xl bg-white border border-gray-100">
                     <div class="w-full h-80 project-placeholder">
-                        <img src="" alt="Proje Görseli Gelecek" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <img src="project2.jpg" alt="Isıtma Sistemleri" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                         <i class="fas fa-image text-4xl text-gray-300 absolute"></i>
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-95 transition-all duration-500 flex flex-col justify-end p-8 text-white">
                         <span class="text-xs uppercase tracking-widest mb-2 text-blue-300 font-bold">Altyapı</span>
-                        <h3 class="font-bold text-2xl mb-1 uppercase">Proje Başlığı 2</h3>
-                        <p class="text-sm opacity-90 flex items-center italic"><i class="fas fa-map-marker-alt mr-2 text-xs"></i>Konum / Yıl</p>
+                        <h3 class="font-bold text-2xl mb-1 uppercase tracking-tight">Isıtma Sistemleri</h3>
+                        <p class="text-sm opacity-90 flex items-center italic"><i class="fas fa-map-marker-alt mr-2 text-xs text-blue-300"></i>Rize / 2023</p>
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-3xl shadow-xl bg-white">
+                <div class="group relative overflow-hidden rounded-3xl shadow-xl bg-white border border-gray-100">
                     <div class="w-full h-80 project-placeholder">
-                        <img src="" alt="Proje Görseli Gelecek" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <img src="project3.jpg" alt="Mimari Tasarım" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                         <i class="fas fa-image text-4xl text-gray-300 absolute"></i>
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-95 transition-all duration-500 flex flex-col justify-end p-8 text-white">
                         <span class="text-xs uppercase tracking-widest mb-2 text-blue-300 font-bold">Mimari</span>
-                        <h3 class="font-bold text-2xl mb-1 uppercase">Proje Başlığı 3</h3>
-                        <p class="text-sm opacity-90 flex items-center italic"><i class="fas fa-map-marker-alt mr-2 text-xs"></i>Konum / Yıl</p>
+                        <h3 class="font-bold text-2xl mb-1 uppercase tracking-tight">Mimari Tasarım</h3>
+                        <p class="text-sm opacity-90 flex items-center italic"><i class="fas fa-map-marker-alt mr-2 text-xs text-blue-300"></i>Trabzon / 2024</p>
                     </div>
                 </div>
             </div>
@@ -94,58 +122,52 @@
 
     <footer class="bg-gray-900 text-white pt-12 pb-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 border-b border-gray-800 pb-8 text-center md:text-left">
-            
             <div class="flex flex-col items-center md:items-start">
                 <h4 class="text-2xl font-black text-blue-400 tracking-tighter uppercase mb-2">B-MAK</h4>
                 <p class="text-gray-400 text-sm italic uppercase tracking-wider font-medium">Profesyonel Mühendislik Çözümleri</p>
             </div>
-            
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">Hızlı Linkler</h4>
-                <ul class="text-gray-400 space-y-2 text-sm font-medium">
-                    <li><a href="hakkimizda.html" class="hover:text-white transition italic">Hakkımızda</a></li>
-                    <li><a href="urunler.html" class="hover:text-white transition italic">Ürünler</a></li>
-                    <li><a href="projeler.html" class="hover:text-white transition italic border-b border-blue-400">Projeler</a></li>
-                    <li><a href="bayilikler.html" class="hover:text-white transition italic">Bayilikler</a></li>
+                <h4 class="font-bold mb-4 uppercase text-blue-400 text-sm italic">Hızlı Linkler</h4>
+                <ul class="text-gray-400 space-y-2 text-sm font-medium italic">
+                    <li><a href="index.html" class="hover:text-white transition"><i class="fas fa-chevron-right text-[10px] mr-1"></i> Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html" class="hover:text-white transition"><i class="fas fa-chevron-right text-[10px] mr-1"></i> Hakkımızda</a></li>
+                    <li><a href="projeler.html" class="hover:text-white transition text-blue-400"><i class="fas fa-chevron-right text-[10px] mr-1"></i> Projeler</a></li>
                 </ul>
             </div>
-
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">İletişim</h4>
-                <p class="text-gray-400 text-[11px] leading-relaxed mb-3">
-                    <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
-                    1 nolu Erdoğdu Mah. Yavuz Selim Blv. Beyazköşk Apt. No:257B Ortahisar/Trabzon
+                <h4 class="font-bold mb-4 uppercase text-blue-400 text-sm italic">İletişim</h4>
+                <p class="text-gray-400 text-[11px] leading-relaxed mb-3 italic">
+                    <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i> 1 nolu Erdoğdu Mah. Yavuz Selim Blv. No:257B Ortahisar/Trabzon
                 </p>
-                <p class="text-gray-400 text-sm mb-2 italic">
-                    <i class="fas fa-phone mr-2 text-blue-400"></i>
-                    0546 147 96 61
-                </p>
-                <p class="text-gray-400 text-sm italic font-medium">
-                    <i class="fas fa-envelope mr-2 text-blue-400"></i>
-                    bmakmuhendislik@gmail.com
-                </p>
+                <p class="text-gray-400 text-sm mb-2 italic"><i class="fas fa-phone-alt mr-2 text-blue-400"></i> 0546 147 96 61</p>
+                <p class="text-gray-400 text-sm italic"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:bmakmuhendislik@gmail.com" class="hover:text-white transition">bmakmuhendislik@gmail.com</a></p>
             </div>
-
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">Bize Ulaşın</h4>
+                <h4 class="font-bold mb-4 uppercase text-blue-400 text-sm italic">Bize Ulaşın</h4>
                 <div class="flex justify-center md:justify-start space-x-3">
+                    <a href="mailto:bmakmuhendislik@gmail.com" class="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg" title="E-posta Gönder">
+                        <i class="fas fa-envelope text-white"></i>
+                    </a>
                     <a href="https://www.instagram.com/bmakmuhendislik/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
                         <i class="fab fa-instagram text-white"></i>
                     </a>
                     <a href="https://wa.me/905461479661" target="_blank" class="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
                         <i class="fab fa-whatsapp text-white text-lg"></i>
                     </a>
-                    <a href="mailto:bmakmuhendislik@gmail.com" class="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
-                        <i class="fas fa-envelope text-white"></i>
-                    </a>
                 </div>
             </div>
         </div>
-        
         <div class="text-center mt-8 text-gray-500 text-[10px] md:text-xs uppercase tracking-widest font-bold">
             &copy; 2025 B-MAK Mühendislik & Mimarlık. Tüm hakları saklıdır.
         </div>
     </footer>
 
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

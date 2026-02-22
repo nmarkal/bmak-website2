@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B-MAK Mühendislik & Mimarlık | Profesyonel Çözümler</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .blue-brand { color: #004aad; }
         .bg-blue-brand { background-color: #004aad; }
         .border-blue-brand { border-color: #004aad; }
-        
-        /* Butonlar için ekstra yumuşak geçiş efekti */
-        .btn-animate {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        .btn-animate { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        /* Mobil menü geçişi için */
+        #mobile-menu { transition: max-height 0.3s ease-out; max-height: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 400px; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -32,22 +31,35 @@
                     </a>
                 </div>
 
-                <div class="hidden md:flex space-x-6 lg:space-x-8 font-semibold">
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold">
                     <a href="index.html" class="blue-brand border-b-2 border-blue-brand px-1 transition text-sm lg:text-base">Ana Sayfa</a>
                     <a href="hakkimizda.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Hakkımızda</a>
                     <a href="urunler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Ürünler</a>
                     <a href="projeler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Projeler</a>
                     <a href="bayilikler.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">Bayilikler</a>
                     <a href="iletisim.html" class="text-gray-600 hover:text-blue-600 transition text-sm lg:text-base">İletişim</a>
+                    
+                    <a href="index-en.html" class="flex items-center bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-gray-500 hover:bg-blue-brand hover:text-white transition shadow-sm border border-gray-200">
+                        <i class="fas fa-globe mr-1"></i> EN
+                    </a>
                 </div>
 
                 <div class="md:hidden flex items-center">
-                    <button class="outline-none mobile-menu-button">
-                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <button id="menu-btn" class="outline-none">
+                        <i class="fas fa-bars text-2xl text-gray-600"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block py-2 text-blue-600 font-bold">Ana Sayfa</a>
+                <a href="hakkimizda.html" class="block py-2 text-gray-600">Hakkımızda</a>
+                <a href="urunler.html" class="block py-2 text-gray-600">Ürünler</a>
+                <a href="projeler.html" class="block py-2 text-gray-600">Projeler</a>
+                <a href="bayilikler.html" class="block py-2 text-gray-600">Bayilikler</a>
+                <a href="iletisim.html" class="block py-2 text-gray-600">İletişim</a>
+                <a href="index-en.html" class="inline-block mt-2 bg-gray-100 px-4 py-1 rounded-full text-xs font-bold">EN Version</a>
             </div>
         </div>
     </nav>
@@ -62,12 +74,10 @@
             <p class="text-xl opacity-90 mb-10 italic max-w-2xl mx-auto">B-MAK Mühendislik & Mimarlık ile geleceği disiplinli ve yenilikçi çözümlerle inşa ediyoruz.</p>
             
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="urunler.html" class="btn-animate bg-white text-blue-900 px-10 py-4 rounded-xl font-bold hover:bg-blue-50 hover:scale-105 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] shadow-xl text-sm md:text-lg flex items-center justify-center">
-                    Ürünleri İncele
-                    <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                <a href="urunler.html" class="btn-animate bg-white text-blue-900 px-10 py-4 rounded-xl font-bold hover:bg-blue-50 hover:scale-105 hover:shadow-2xl text-sm md:text-lg flex items-center justify-center">
+                    Ürünleri İncele <i class="fas fa-arrow-right ml-2 text-sm"></i>
                 </a>
-                
-                <a href="iletisim.html" class="btn-animate border-2 border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-900 hover:scale-105 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition text-sm md:text-lg flex items-center justify-center">
+                <a href="iletisim.html" class="btn-animate border-2 border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-900 hover:scale-105 transition text-sm md:text-lg flex items-center justify-center">
                     Bize Ulaşın
                 </a>
             </div>
@@ -100,14 +110,12 @@
         </div>
     </div>
 
-    <footer class="bg-gray-900 text-white pt-12 pb-8">
+    <footer class="bg-gray-900 text-white pt-12 pb-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 border-b border-gray-800 pb-8 text-center md:text-left">
-            
             <div class="flex flex-col items-center md:items-start">
                 <h4 class="text-2xl font-black text-blue-400 tracking-tighter uppercase mb-2">B-MAK</h4>
                 <p class="text-gray-400 text-sm italic uppercase tracking-wider font-medium">Profesyonel Mühendislik Çözümleri</p>
             </div>
-            
             <div>
                 <h4 class="font-bold mb-4 uppercase text-blue-400">Hızlı Linkler</h4>
                 <ul class="text-gray-400 space-y-2 text-sm font-medium">
@@ -115,45 +123,39 @@
                     <li><a href="urunler.html" class="hover:text-white transition italic">Ürünler</a></li>
                     <li><a href="projeler.html" class="hover:text-white transition italic">Projeler</a></li>
                     <li><a href="bayilikler.html" class="hover:text-white transition italic">Bayilikler</a></li>
+                    <li><a href="iletisim.html" class="hover:text-white transition italic">İletişim</a></li>
                 </ul>
             </div>
-
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">İletişim</h4>
-                <p class="text-gray-400 text-[11px] leading-relaxed mb-3">
+                <h4 class="font-bold mb-4 uppercase text-blue-400">İletişim Detayları</h4>
+                <div class="text-gray-400 text-[11px] leading-relaxed mb-3">
                     <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
                     1 nolu Erdoğdu Mah. Yavuz Selim Blv. Beyazköşk Apt. No:257B Ortahisar/Trabzon
-                </p>
-                <p class="text-gray-400 text-sm mb-2 italic">
-                    <i class="fas fa-phone mr-2 text-blue-400"></i>
-                    0546 147 96 61
-                </p>
-                <p class="text-gray-400 text-sm italic">
-                    <i class="fas fa-envelope mr-2 text-blue-400"></i>
-                    bmakmuhendislik@gmail.com
-                </p>
+                </div>
+                <p class="text-gray-400 text-sm mb-2 italic"><i class="fas fa-phone mr-2 text-blue-400"></i>0546 147 96 61</p>
+                <p class="text-gray-400 text-sm italic font-medium"><i class="fas fa-envelope mr-2 text-blue-400"></i>bmakmuhendislik@gmail.com</p>
             </div>
-
             <div>
-                <h4 class="font-bold mb-4 uppercase text-blue-400">Bize Ulaşın</h4>
+                <h4 class="font-bold mb-4 uppercase text-blue-400">Takip Edin</h4>
                 <div class="flex justify-center md:justify-start space-x-3">
-                    <a href="https://www.instagram.com/bmakmuhendislik/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
-                        <i class="fab fa-instagram text-white"></i>
-                    </a>
-                    <a href="https://wa.me/905461479661" target="_blank" class="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
-                        <i class="fab fa-whatsapp text-white text-lg"></i>
-                    </a>
-                    <a href="mailto:bmakmuhendislik@gmail.com" class="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg">
-                        <i class="fas fa-envelope text-white"></i>
-                    </a>
+                    <a href="https://www.instagram.com/bmakmuhendislik/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="https://wa.me/905461479661" target="_blank" class="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fab fa-whatsapp text-white text-lg"></i></a>
+                    <a href="mailto:bmakmuhendislik@gmail.com" class="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-full hover:scale-110 transition shadow-lg"><i class="fas fa-envelope text-white"></i></a>
                 </div>
             </div>
         </div>
-        
         <div class="text-center mt-8 text-gray-500 text-[10px] md:text-xs uppercase tracking-widest font-bold">
             &copy; 2025 B-MAK Mühendislik & Mimarlık. Tüm hakları saklıdır.
         </div>
     </footer>
 
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
